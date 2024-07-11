@@ -1,12 +1,11 @@
-version: '3.7'
 services:
- postgres96:
-  container_name: postgres96_dev
-  build: './postgres96pe'
+ postgres16:
+  container_name: postgres16_dev
+  build: './postgrespe'
   env_file:
       - database.env # configure postgres
   ports:
-      - '50000:5432'
+      - '55000:5432'
   volumes:
       - ./backup:/backup
       - ./data:/var/lib/postgresql/data
